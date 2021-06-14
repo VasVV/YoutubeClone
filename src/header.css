@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky !important;
+    top: 0;
+    background-color: white;
+    z-index: 99;
+}
+
+.header__logo {
+   
+}
+.header__buttons {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100px;
+    
+}
+
+.header__search {
+    display: flex;
+    flex: 0.7
+}
+
+.header__logo__image {
+    max-width: 30px;
+    height:auto;
+}
+
+.header__buttons__avatar {
+    width: 25px !important;
+    height: auto !important;
+    
+}
+
+.header__search__input {
+width: 100%
+}
