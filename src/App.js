@@ -4,16 +4,50 @@ import './App.css';
 import Header from './header';
 import Sidebar from './sidebar';
 import Dashboard from './dashboard';
+import Login from './login';
+
+import {useSelector} from 'react-redux';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import VideoPage from './videopage';
+
 
 function App() {
+
+  const currUser = useSelector(state => state.user);
+
   return (
-    <div className="app">
-      <Header />
-      <div className='app__t'>
-      <Sidebar />
-      <Dashboard />
+    <Router>
+       <Switch>
+       <Route exact path="/">
+        
+      <div className="app">
+        {currUser.length > 0 ?
+          <>
+          <Header />
+          <div className='app__t'>
+            <Sidebar />
+            <Dashboard />
+          </div> 
+          </>
+          : <Login />}
+        
       </div>
-    </div>
+
+      </Route>
+
+      <Route path="/video">
+            <VideoPage />
+        </Route>
+      
+      </Switch>
+    </Router>
   );
 }
 

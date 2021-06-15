@@ -1,22 +1,22 @@
 .dashboard__video {
 }
 
-.dashboard {
+.infinite-scroll-component  {
     display: grid;
     width: 100%;
     grid-template-columns:  repeat(4, 1fr)
 }
 
 @media (max-width: 900px) {
-    .dashboard { grid-template-columns: repeat(3, 1fr); }
+    .infinite-scroll-component { grid-template-columns: repeat(3, 1fr); }
   }
 
   @media (max-width: 450px) {
-    .dashboard { grid-template-columns: repeat(2, 1fr); }
+    .infinite-scroll-component  { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (max-width: 250px) {
-    .dashboard { grid-template-columns: repeat(1, 1fr); }
+    .infinite-scroll-component { grid-template-columns: repeat(1, 1fr); }
   }
 
 .dashboard__video { 
